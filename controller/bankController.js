@@ -1,4 +1,4 @@
-const BaseController = require('../../../../core/BaseController');
+const BaseController = require('../core/baseController');
 
 module.exports = class BankController extends BaseController {
     payService(req, res, next) {

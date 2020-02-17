@@ -1,5 +1,5 @@
-const createBankService = require('../services/BankService');
-const createBankController = require('../controllers/BankController');
+const BankService = require('../services/BankService');
+const BankController = require('../controller/BankController');
 
 function createBankService() {
   return new BankService();

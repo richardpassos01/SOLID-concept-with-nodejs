@@ -1,5 +1,5 @@
 const Promise = require('bluebird');
-const logger = require('../util/logger');
+const debug = require('debug')('my-debug');
 
 module.exports = class BaseController {
   static get Promise() {
@@ -8,7 +8,7 @@ module.exports = class BaseController {
   constructor({ service }) {
     this.service = service;
     this.errorHandler = (err = {}, req, res) => {
-      logger.error(err);
+      debug(err);
 
       res.status(err.statusCode || 400).json(err);
     };
